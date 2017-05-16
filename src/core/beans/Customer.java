@@ -30,6 +30,16 @@ public class Customer {
 	public Customer() {
 
 	}
+	
+	
+	
+	/**
+	 * CTOR - use only to update
+	 */
+	public Customer(String email) {
+		super();
+		this.email = email;
+	}
 
 	/**
 	 * CTOR, use to crerate new customers
@@ -102,7 +112,7 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", password=" + password + ", email=" + email + "]";
+		return "Customer [name=" + name + ", password=" + password + ", email=" + email + "]";
 	}
 
 }

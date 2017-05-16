@@ -22,13 +22,7 @@ public class Coupon {
 	private double price;
 	private String image;
 	
-	/**
-	 * get coupon id 
-	 * @return {@link Long}
-	 */
-	public long getId() {
-		return id;
-	}
+	
 	
 	
 	/**
@@ -36,7 +30,17 @@ public class Coupon {
 	 */
 	public Coupon() {
 	}
+	
+	
 
+
+	/**
+	 * CTOR use only for updating
+	 */
+	public Coupon(String title) {
+		super();
+		this.title = title;
+	}
 
 
 	/**
@@ -63,6 +67,16 @@ public class Coupon {
 		this.image = image;
 	}
 
+	
+	
+	
+	/**
+	 * get coupon id 
+	 * @return {@link Long}
+	 */
+	public long getId() {
+		return id;
+	}
 
 	/**
 	 * set coupon id - for internal use only
@@ -205,7 +219,7 @@ public class Coupon {
 	 */
 	@Override
 	public String toString() {
-		return "Coupon [id=" + id + ", title=" + title + ", startDate=" + startDate + ", endDate=" + endDate
+		return "Coupon [title=" + title + ", startDate=" + startDate + ", endDate=" + endDate
 				+ ", amount=" + amount + ", type=" + type + ", message=" + message + ", price=" + price + ", image="
 				+ image + "]";
 	}
